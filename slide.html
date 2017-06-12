@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+<body>
+  <div id="carousel">
+    <img src="img/1.jpg"  id="pic-1"/>
+    <img src="img/2.jpg"  id="pic-2"/>
+    <img src="img/3.jpg"  id="pic-3"/>
+    <img src="img/4.jpg"  id="pic-4"/>
+
+  </div>
+
+<a href="#" id="prev"><img src="img/previous.png " width="20px"></a>
+<a href="#" id="next"><img src="img/next.jpg " width="20px"></a>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+ <!--<script type="text/javascript" src="js/jquery.waterwheelCarousel.min.js"></script> -->
+  <script type="text/javascript">
+
+$(document).ready(function(){
+ var carousel = $("#carousel").waterwheelCarousel({
+   flankingItems:3,});
+
+   $("#prev").bind("click",function(){
+     carousel.prev();
+     return false;
+   });
+
+   $("#next").bind("click",function(){
+     carousel.next();
+     return false;
+   });
+});
+
+
+
+</script>
+
+</html>
